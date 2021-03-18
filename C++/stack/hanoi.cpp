@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-void hanoi() {}
+void hanoi();
 
 int main()
 {
