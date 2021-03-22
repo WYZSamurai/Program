@@ -1,4 +1,4 @@
-#include <list>
+#include <vector>
 #include <iostream>
 using namespace std;
 
@@ -6,19 +6,20 @@ typedef struct node
 {
     int m;
     int n;
-
-    node(int x, int y)
-    {
-        m = x;
-        n = y;
-    }
-    node();
-} lnode;
+} node;
 
 int main()
 {
-    list<node> l;
-    node a(1,2);
+    vector<node> v;
+    auto it = v.begin();
+    node n = {2, 1};
+    node m = {3, 3};
+    cout << (it.base() == NULL) << endl;
+    v.push_back(n);
+    v.push_back(m);
+    it = v.begin();
+    cout << v.size() << endl;
+    cout << (it.base() == NULL) << endl;
     system("pause");
     return 0;
 }
