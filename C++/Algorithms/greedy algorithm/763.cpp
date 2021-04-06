@@ -11,14 +11,15 @@ public:
     {
         vector<int> last(26, 0);
         vector<int> result;
-        for (int i = 0; i < S.length(); i++)
+        auto length = S.length();
+        for (int i = 0; i < length; i++)
         {
             last[S[i] - 'a'] = i;
         }
         int head, end;
         head = 0;
         end = last[S[0] - 'a'];
-        for (int i = 0; i < S.length(); i++)
+        for (int i = 0; i < length; i++)
         {
             if (end < last[S[i] - 'a'])
             {
