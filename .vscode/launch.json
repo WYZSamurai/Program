@@ -6,10 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Test",
+            "name": "Launch External Terminal",
             "request": "launch",
-            "mainClass": "Test",
-            "projectName": "Program_de2225cb"
+            "console": "externalTerminal",
+            "mainClass": ""
         },
         {
             "name": "Python: 当前文件",
