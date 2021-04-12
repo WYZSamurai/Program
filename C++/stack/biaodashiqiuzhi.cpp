@@ -2,13 +2,13 @@
 #include <stack>
 using namespace std;
 
-char r[7][7] = {{'>', '>', '<', '<', '<', '>', '>'},
+char r[7][7] = { {'>', '>', '<', '<', '<', '>', '>'},
                 {'>', '>', '<', '<', '<', '>', '>'},
                 {'>', '>', '>', '>', '<', '>', '>'},
                 {'>', '>', '>', '>', '<', '>', '>'},
                 {'<', '<', '<', '<', '<', '=', '0'},
                 {'>', '>', '>', '>', '0', '>', '>'},
-                {'<', '<', '<', '<', '<', '0', '='}};
+                {'<', '<', '<', '<', '<', '0', '='} };
 
 int match(char a)
 {
@@ -48,7 +48,7 @@ char fun(char a, char b)
     return r[i][j];
 }
 
-char signlist[7] = {'+', '-', '*', '/', '(', ')', '#'};
+char signlist[7] = { '+', '-', '*', '/', '(', ')', '#' };
 
 bool in(char a, char c[])
 {
@@ -60,7 +60,7 @@ bool in(char a, char c[])
     return false;
 }
 
-double operat(stack<char> &sign, stack<double> &num)
+double operat(stack<char>& sign, stack<double>& num)
 {
     char c = sign.top();
     sign.pop();

@@ -26,7 +26,7 @@ int main()
     char *s;
     s = enterstr();
     cout << s << endl;
-    cout << strlen(s) << endl;
+    //cout << strlen(s) << endl;
 
     system("pause");
     return 0;
