@@ -1,3 +1,4 @@
 fun main() {
-    println("Hello world!")
+    val str = "xswxx"
+    println(str)
 }
