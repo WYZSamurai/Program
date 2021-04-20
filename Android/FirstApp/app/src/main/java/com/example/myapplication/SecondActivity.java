@@ -15,9 +15,11 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        Intent intent = getIntent();
+
+        /*Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
-        Log.d(TAG, data);
+        Log.d(TAG, data);*/
+
         Button button2 = findViewById(R.id.button_2);
         button2.setOnClickListener(v -> {
             finish();
