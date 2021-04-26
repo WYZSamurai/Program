@@ -3,6 +3,11 @@
 #include <algorithm>
 using namespace std;
 
+/*
+用快慢指针（floyd判圈法）
+快指针走两步，慢指针走一步
+*/
+
 class ListNode {
 public:
     int val;
@@ -21,6 +26,19 @@ public:
 class Solution {
 public:
     ListNode* detectCycle(ListNode* head) {
+        ListNode* fast = head;
+        ListNode* slow = head;
+        do {
+            if (!fast || !(fast->next))return nullptr;
+            fast = fast->next->next;
+            slow = slow->next;
+        } while (fast != slow);
+        fast = head;
+        while (fast != slow) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+        return fast;
     }
 };
 
@@ -33,7 +51,7 @@ int main() {
         cin >> val;
         l[i] = ListNode(val);
         if (i > 0) {
-            l[i - 1].next = l[i].next;
+            l[i - 1].next = &l[i];
         }
     }
     int pos;
@@ -42,15 +60,10 @@ int main() {
         l[n - 1].next = &l[pos];
         //cout << l[n - 1].next->val << endl;
     }
-    /*
-    for (int i = 0;i < n;++i) {
-        cout << l[i].val << ' ';
-    }
-    cout << endl;
-    */
 
     Solution s;
-    s.detectCycle(l);
+    //int val = s.detectCycle(l)->val;
+    //cout << val << endl;
 
     system("pause");
     return 0;
