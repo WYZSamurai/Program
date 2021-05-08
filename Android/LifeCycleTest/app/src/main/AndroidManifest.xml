@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeCycleTest">
-        <activity android:name=".Dialog"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog">
-        </activity>
-        <activity android:name=".Normal" />
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".Dialog"/>
+
+        <activity android:name=".Normal"
+            android:launchMode="singleInstance"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
