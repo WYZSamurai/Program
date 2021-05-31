@@ -1,7 +1,5 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-typedef long long ll;
 const int MOD = 998244353;
 const int MAXN = 202020;
 int fac[MAXN], facinv[MAXN];
@@ -29,25 +27,14 @@ void init()
     for (int i = MAXN;i > 0;i--)
         facinv[i - 1] = (long long)facinv[i] * (i) % MOD;
 }
-
-int main() {
+int main()
+{
     init();
-    ll n;
-    scanf("%lld", &n);
-    ll m;
-    if (n % 2 == 0) {
-        m = n / 2 - 1;
+    int n, m;
+    while (1)
+    {
+        scanf("%d %d", &n, &m);
+        printf("%lld\n", C(n, m));
     }
-    else {
-        m = n / 2;
-    }
-    ll res = 0;
-    for (ll i = 1;i <= m;i++) {
-        ll j = n - 2;
-        res += C(j, i - 1) * 2;
-    }
-    res = res % MOD;
-    printf("%lld\n", res);
     system("pause");
-    return 0;
 }

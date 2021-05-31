@@ -46,7 +46,8 @@
         "typeinfo": "cpp",
         "functional": "cpp",
         "iterator": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "stdio.h": "c"
     },
     "java.project.sourcePaths": [
         "Java"
